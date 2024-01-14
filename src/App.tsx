@@ -10,8 +10,8 @@ function App() {
 	return (
 		<div className={styles.App}>
 			<QueryClientProvider client={queryClient}>
-				<RecipesList />
 				<NavBar />
+				<RecipesList />
 			</QueryClientProvider>
 		</div>
 	)
