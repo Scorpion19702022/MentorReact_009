@@ -13,13 +13,13 @@
 
 .navBar {
 	width: 100%;
-	background-color: var(--color-cakeOne);
+	background-color: var(--color-soupThree);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1em 2em;
+	padding: 0.6em 2em;
 }
 
 .logo {
-	width: 14%;
+	width: 20%;
 }

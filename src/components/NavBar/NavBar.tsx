@@ -3,7 +3,7 @@ import React from 'react'
 import DarkModeIcon from '@mui/icons-material/DarkMode'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
-import Logo from './assets/foodLogo.png'
+import Logo from './assets/logoFood.png'
 import styles from './NavBar.module.css'
 
 const NavBar = () => {
