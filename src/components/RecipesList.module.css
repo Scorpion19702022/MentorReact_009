@@ -1,11 +1,3 @@
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
 :root {
 	--color-cakeOne: #fff5c8;
 	--color-cakeTwo: #ffd61e;
@@ -19,11 +11,6 @@
 	--color-soupFive: #4a0b0b;
 }
 
-.App {
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: var(--color-soupOne);
+.boxRecipesList {
+	padding-top: 5em;
 }
