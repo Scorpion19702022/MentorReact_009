@@ -1,0 +1,24 @@
+:root {
+	--color-cakeOne: #fff5c8;
+	--color-cakeTwo: #ffd61e;
+	--color-cakeThree: #ff6a00;
+	--color-cakeFour: #862200;
+	--color-cakeFive: #490000;
+	--color-soupOne: #ffadad;
+	--color-soupTwo: #975d5d;
+	--color-soupThree: #f50000;
+	--color-soupFour: #d10000;
+	--color-soupFive: #4a0b0b;
+}
+
+.navBar {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em 2em;
+}
+
+.icon {
+	color: var(--color-cakeTwo);
+}

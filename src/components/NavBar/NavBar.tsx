@@ -13,11 +13,11 @@ const NavBar = () => {
 				<img className={styles.logo} src={Logo} alt='logo' />
 			</div>
 			<div className={styles.boxNavIcon}>
-				<DarkModeIcon />
-				<LightModeIcon />
+				<DarkModeIcon className={styles.iconDark} />
+				<LightModeIcon className={styles.iconLight} />
 			</div>
 			<div className={styles.boxNavFavorite}>
-				<FavoriteBorderIcon />
+				<FavoriteBorderIcon className={styles.iconFavorite} />
 			</div>
 		</div>
 	)
