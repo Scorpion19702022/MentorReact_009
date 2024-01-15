@@ -14,6 +14,12 @@ const RecipesList = () => {
 
 	console.log(data)
 
+	const recipeOne = data?.map(item => item.RecipeOne)
+	const recipeTwo = data?.map(item => item.RecipeTwo)
+
+	console.log(recipeOne)
+	console.log(recipeTwo)
+
 	return (
 		<div className={styles.boxRecipesList}>
 			<h2>Lista przepisów</h2>
