@@ -14,9 +14,21 @@ const RecipesList = () => {
 
 	console.log(data)
 
+	const recipes = data?.map(recipe => (
+		<div key={recipe.id}>
+			<img src={recipe.img} alt='' />
+			<h2>{recipe.meal}</h2>
+			<h4>{recipe.category}</h4>
+			<ul>
+				<li>{recipe.ingrendients}</li>
+			</ul>
+		</div>
+	))
+
 	return (
 		<div className={styles.boxRecipesList}>
 			<h2>Lista przepisów</h2>
+			{recipes}
 		</div>
 	)
 }
