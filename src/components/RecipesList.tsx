@@ -7,14 +7,20 @@ import styles from './RecipesList.module.css'
 const RecipesList = () => {
 	const fetchReiceps = async () => {
 		const res = await axios.get('https://recipeapp-4edaa-default-rtdb.europe-west1.firebasedatabase.app/Recipes.json')
-		return res.data
+		return [res.data]
 	}
 
 	const { data, isError, isLoading } = useQuery('recipesData', fetchReiceps)
 
-	const [recipes, setRecipes] = useState(data)
+	console.log(data)
 
-	console.log(recipes)
+	// let recipes = []
+
+	// recipes.push(data)
+
+	// console.log(recipes.RecipeOne)
+
+	// const test = recipes.map(item => item.author)
 
 	return (
 		<div className={styles.boxRecipesList}>
