@@ -16,7 +16,7 @@ const RecipesList = () => {
 
 	const recipes = data?.map(recipe => (
 		<div key={recipe.id}>
-			<img src={recipe.img} alt='' />
+			<img className={styles.img} src={recipe.img} alt='' />
 			<h2>{recipe.meal}</h2>
 			<h4>{recipe.category}</h4>
 			<ul>
