@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 import { useQuery } from 'react-query'
 
@@ -12,7 +12,9 @@ const RecipesList = () => {
 
 	const { data, isError, isLoading } = useQuery('recipesData', fetchReiceps)
 
-	console.log(data)
+	const [recipes, setRecipes] = useState(data)
+
+	console.log(recipes)
 
 	return (
 		<div className={styles.boxRecipesList}>
