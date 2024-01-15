@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import axios from 'axios'
 import { useQuery } from 'react-query'
 
@@ -13,14 +13,6 @@ const RecipesList = () => {
 	const { data, isError, isLoading } = useQuery('recipesData', fetchReiceps)
 
 	console.log(data)
-
-	// let recipes = []
-
-	// recipes.push(data)
-
-	// console.log(recipes.RecipeOne)
-
-	// const test = recipes.map(item => item.author)
 
 	return (
 		<div className={styles.boxRecipesList}>
