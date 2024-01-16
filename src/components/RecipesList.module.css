@@ -28,6 +28,7 @@
 }
 
 .recipeCard {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	width: 32%;
@@ -35,8 +36,24 @@
 	padding: 1em;
 	margin: 1em;
 	background-color: var(--color-cakeOne);
+	border: 0.04em solid var(--color-soupFive);
+	box-shadow: 0.1em 0.1em 1em var(--color-soupFive);
 }
 
 .img {
+	margin-bottom: 1em;
 	width: 100%;
+}
+
+.title {
+	color: var(--color-soupFour);
+	padding-bottom: 0.4em;
+	border-bottom: 0.04em solid var(--color-soupFive);
+}
+
+.recipeCategory {
+	position: absolute;
+	padding: 0.4em;
+	background-color: var(--color-soupThree);
+	color: var(--color-cakeOne);
 }
