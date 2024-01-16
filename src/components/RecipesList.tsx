@@ -19,13 +19,14 @@ const RecipesList = () => {
 			<img className={styles.img} src={recipe.img} alt='' />
 			<h2>{recipe.meal}</h2>
 			<h4>{recipe.category}</h4>
-			{recipe.ingrendients.map(item => (
-				<ul>
-					<li>{item}</li>
-					<li></li>
-					<li></li>
-				</ul>
-			))}
+			<ul>
+				<li>{recipe.ingrendients[1]}</li>
+				<li>{recipe.ingrendients[2]}</li>
+				<li>{recipe.ingrendients[3]}</li>
+			</ul>
+			<p>{recipe.methodOfPreparing}</p>
+			<p>{recipe.rating}</p>
+			<em>{recipe.author}</em>
 		</div>
 	))
 
