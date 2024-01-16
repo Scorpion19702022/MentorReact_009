@@ -32,7 +32,6 @@ const RecipesList = () => {
 
 	return (
 		<div className={styles.boxRecipesList}>
-			<h2>Lista przepisów</h2>
 			<div className={styles.recipesList}>{recipes}</div>
 		</div>
 	)
