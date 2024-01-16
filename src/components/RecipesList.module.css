@@ -71,6 +71,11 @@
 	justify-content: flex-end;
 }
 
+.countRating {
+	font-weight: bold;
+	color: var(--color-cakeFive);
+}
+
 .author {
 	display: flex;
 	justify-content: flex-end;
