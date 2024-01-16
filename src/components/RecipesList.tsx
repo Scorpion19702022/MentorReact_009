@@ -19,6 +19,13 @@ const RecipesList = () => {
 			<img className={styles.img} src={recipe.img} alt='' />
 			<h2>{recipe.meal}</h2>
 			<h4>{recipe.category}</h4>
+			{recipe.ingrendients.map(item => (
+				<ul>
+					<li>{item}</li>
+					<li></li>
+					<li></li>
+				</ul>
+			))}
 		</div>
 	))
 
