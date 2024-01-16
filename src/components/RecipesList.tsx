@@ -15,25 +15,25 @@ const RecipesList = () => {
 	console.log(data)
 
 	const recipes = data?.map(recipe => (
-		<div key={recipe.id}>
+		<div key={recipe.id} className={styles.recipeCard}>
 			<img className={styles.img} src={recipe.img} alt='' />
-			<h2>{recipe.meal}</h2>
-			<h4>{recipe.category}</h4>
-			<ul>
-				<li>{recipe.ingrendients[1]}</li>
-				<li>{recipe.ingrendients[2]}</li>
-				<li>{recipe.ingrendients[3]}</li>
+			<h3 className={styles.title}>{recipe.meal}</h3>
+			<h5 className={styles.recipeCategory}>{recipe.category}</h5>
+			<ul className={styles.recipeIngredients}>
+				<li className={styles.ingredient}>{recipe.ingrendients[1]}</li>
+				<li className={styles.ingredient}>{recipe.ingrendients[2]}</li>
+				<li className={styles.ingredient}>{recipe.ingrendients[3]}</li>
 			</ul>
-			<p>{recipe.methodOfPreparing}</p>
-			<p>{recipe.rating}</p>
-			<em>{recipe.author}</em>
+			<p className={styles.method}>{recipe.methodOfPreparing}</p>
+			<p className={styles.rating}>{recipe.rating}</p>
+			<em className={styles.author}>{recipe.author}</em>
 		</div>
 	))
 
 	return (
 		<div className={styles.boxRecipesList}>
 			<h2>Lista przepisów</h2>
-			{recipes}
+			<div className={styles.recipesList}>{recipes}</div>
 		</div>
 	)
 }
