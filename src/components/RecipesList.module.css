@@ -41,19 +41,37 @@
 }
 
 .img {
-	margin-bottom: 1em;
+	margin-bottom: 0.6em;
 	width: 100%;
 }
 
 .title {
 	color: var(--color-soupFour);
 	padding-bottom: 0.4em;
+	margin-bottom: 0.6em;
 	border-bottom: 0.04em solid var(--color-soupFive);
 }
 
 .recipeCategory {
+	width: 20%;
+	text-align: center;
 	position: absolute;
 	padding: 0.4em;
 	background-color: var(--color-soupThree);
 	color: var(--color-cakeOne);
+}
+
+.recipeIngredients {
+	width: 100%;
+	padding: 1em;
+}
+
+.rating {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.author {
+	display: flex;
+	justify-content: flex-end;
 }

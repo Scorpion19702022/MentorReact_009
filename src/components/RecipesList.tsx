@@ -25,7 +25,9 @@ const RecipesList = () => {
 				<li className={styles.ingredient}>{recipe.ingrendients[3]}</li>
 			</ul>
 			<p className={styles.method}>{recipe.methodOfPreparing}</p>
-			<p className={styles.rating}>{recipe.rating}</p>
+			<p className={styles.rating}>
+				rating: <span>{recipe.rating}</span>
+			</p>
 			<em className={styles.author}>{recipe.author}</em>
 		</div>
 	))
