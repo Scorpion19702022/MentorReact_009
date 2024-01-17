@@ -9,7 +9,7 @@
 	--color-soupThree: #f50000;
 	--color-soupFour: #d10000;
 	--color-soupFive: #4a0b0b;
-	--color-gradientOne: radial-gradient(circle at center, #ffadad, #fd6161);
+	--color-gradientOne: linear-gradient(45deg, #fff5c8 0%, #d10000 120%);
 }
 
 .boxRecipesList {
@@ -36,7 +36,7 @@
 	height: 50%;
 	padding: 1em;
 	margin: 1em;
-	background-color: var(--color-cakeOne);
+	background: var(--color-gradientOne);
 	border: 0.04em solid var(--color-soupFive);
 	box-shadow: 0.1em 0.1em 1em var(--color-soupFive);
 }
