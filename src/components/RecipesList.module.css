@@ -9,7 +9,7 @@
 	--color-soupThree: #f50000;
 	--color-soupFour: #d10000;
 	--color-soupFive: #4a0b0b;
-	--color-gradientOne: linear-gradient(45deg, #fff5c8 0%, #d10000 120%);
+	--color-gradientOne: linear-gradient(45deg, #fff5c8 20%, #f50000 180%);
 }
 
 .boxRecipesList {
@@ -33,7 +33,7 @@
 	display: flex;
 	flex-direction: column;
 	width: 32%;
-	height: 50%;
+	height: 54%;
 	padding: 1em;
 	margin: 1em;
 	background: var(--color-gradientOne);
@@ -47,7 +47,7 @@
 }
 
 .title {
-	color: var(--color-soupFour);
+	color: var(--color-cakeFive);
 	padding-bottom: 0.4em;
 	margin-bottom: 0.6em;
 	border-bottom: 0.04em solid var(--color-soupFive);
@@ -58,7 +58,7 @@
 	text-align: center;
 	position: absolute;
 	padding: 0.4em;
-	background-color: var(--color-soupThree);
+	background-color: var(--color-cakeFive);
 	color: var(--color-cakeOne);
 }
 
