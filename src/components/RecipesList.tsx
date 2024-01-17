@@ -20,7 +20,7 @@ const RecipesList = () => {
 			<h3 className={styles.title}>{recipe.meal}</h3>
 			<h5 className={styles.recipeCategory}>{recipe.category}</h5>
 			<div className={styles.ingredients}>
-				<em className={styles.titleIngredients}>składniki:</em>
+				<em className={styles.titleIngredients}>ingredients:</em>
 				<ul className={styles.recipeIngredients}>
 					<li className={styles.ingredient}>{recipe.ingrendients[1]}</li>
 					<li className={styles.ingredient}>{recipe.ingrendients[2]}</li>
