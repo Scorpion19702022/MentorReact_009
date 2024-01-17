@@ -9,12 +9,13 @@
 	--color-soupThree: #f50000;
 	--color-soupFour: #d10000;
 	--color-soupFive: #4a0b0b;
+	--color-soupSix: #a70000;
 }
 
 .navBar {
 	position: fixed;
 	width: 100%;
-	background-color: var(--color-soupThree);
+	background-color: var(--color-soupSix);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
