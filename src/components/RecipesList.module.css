@@ -62,9 +62,19 @@
 	color: var(--color-cakeOne);
 }
 
+.ingredients {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 0.4em;
+	border-bottom: 0.04em solid var(--color-cakeFive);
+}
+
 .recipeIngredients {
 	width: 100%;
-	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	padding: 0em 1em 1em 1em;
 }
 
 .rating {
@@ -78,6 +88,7 @@
 }
 
 .author {
-	display: flex;
-	justify-content: flex-end;
+	position: absolute;
+	bottom: 4%;
+	right: 6%;
 }
