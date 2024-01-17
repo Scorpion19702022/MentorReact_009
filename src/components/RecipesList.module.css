@@ -9,6 +9,7 @@
 	--color-soupThree: #f50000;
 	--color-soupFour: #d10000;
 	--color-soupFive: #4a0b0b;
+	--color-gradientOne: radial-gradient(circle at center, #ffadad, #fd6161);
 }
 
 .boxRecipesList {
