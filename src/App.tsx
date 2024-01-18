@@ -1,17 +1,23 @@
 import React from 'react'
 
 import styles from './App.module.css'
-import RecipesList from './components/RecipesList'
 import { QueryClientProvider, QueryClient } from 'react-query'
-import NavBar from './components/NavBar/NavBar'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import RecipePage from './pages/RecipePage'
+
 const queryClient = new QueryClient({})
 
 function App() {
 	return (
 		<div className={styles.App}>
 			<QueryClientProvider client={queryClient}>
-				<NavBar />
-				<RecipesList />
+				<BrowserRouter>
+					<Routes>
+						<Route path='/' element={<Home />} />
+						<Route path='/recipe/:id' element={<RecipePage />} />
+					</Routes>
+				</BrowserRouter>
 			</QueryClientProvider>
 		</div>
 	)
