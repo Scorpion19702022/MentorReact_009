@@ -9,12 +9,6 @@ import RecipePage from './pages/RecipePage'
 const queryClient = new QueryClient({})
 
 function App() {
-	const number = '1'
-	console.log(typeof number)
-
-	const newNumber = +number
-	console.log(typeof newNumber)
-
 	return (
 		<div className={styles.App}>
 			<QueryClientProvider client={queryClient}>

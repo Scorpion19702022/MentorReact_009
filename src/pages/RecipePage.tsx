@@ -22,10 +22,10 @@ const RecipePage = () => {
 		newRecipes.push(data[value])
 	}
 	const recipe = newRecipes.find(r => r.id === Number(id))
-	// console.log(recipe)
+	console.log(recipe)
 
-	// console.log(id)
-	// console.log(newRecipes)
+	console.log(id)
+	console.log(newRecipes)
 
 	return (
 		<div>

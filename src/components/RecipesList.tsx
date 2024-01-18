@@ -23,7 +23,7 @@ const RecipesList = () => {
 		newRecipes.push(data[value])
 	}
 
-	// console.log(newRecipes)
+	console.log(newRecipes)
 
 	const recipes = newRecipes?.map(recipe => (
 		<div key={recipe.id} className={styles.recipeCard}>
