@@ -49,7 +49,7 @@ const RecipesList = () => {
 			</div>
 			<p className={styles.method}>{recipe.methodOfPreparing}</p>
 			<p className={styles.rating}>
-				rating: <span className={styles.countRating}> {recipe.rating}</span>
+				rating: <span className={styles.countRating}>{recipe.rating}</span>
 			</p>
 			<em className={styles.author}>{recipe.author}</em>
 		</div>
