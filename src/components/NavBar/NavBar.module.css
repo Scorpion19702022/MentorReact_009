@@ -15,7 +15,7 @@
 .navBar {
 	position: fixed;
 	width: 100%;
-	height: 10vh;
+	height: 8vh;
 	background-color: var(--color-soupSix);
 	display: flex;
 	justify-content: space-between;
@@ -37,25 +37,22 @@
 	height: 100%;
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 }
 
 .iconDark,
 .iconLight {
+	height: 75%;
 	cursor: pointer;
-}
-
-.iconLight {
-	color: var(--color-cakeOne);
 }
 
 .boxNavFavorite {
 	width: 30%;
+	height: 100%;
 	display: flex;
 	justify-content: flex-end;
 }
 
-.iconFavorite {
-	font-size: 3em;
-	color: var(--color-cakeOne);
+.iconFavourite {
 	cursor: pointer;
 }
