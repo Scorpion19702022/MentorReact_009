@@ -42,6 +42,7 @@
 
 .iconDark,
 .iconLight {
+	padding: 0.2em;
 	height: 75%;
 	cursor: pointer;
 }
@@ -51,8 +52,11 @@
 	height: 100%;
 	display: flex;
 	justify-content: flex-end;
+	align-items: center;
 }
 
 .iconFavourite {
+	padding: 0.2em;
+	height: 75%;
 	cursor: pointer;
 }
