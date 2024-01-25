@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import axios from 'axios'
 import { useQuery } from 'react-query'
 
 import styles from './RecipesList.module.css'
 
 import { Link } from 'react-router-dom'
+import useFetch from '../Hooks/useFetch'
+import WishListContext from '../Context/WishListContext'
 
 const RecipesList = () => {
 	const fetchReiceps = async () => {
@@ -14,6 +16,7 @@ const RecipesList = () => {
 
 	const { data, isError, isLoading } = useQuery('recipesData', fetchReiceps)
 
+	const { favRecipes, addToWishList, deleteFromWishList } = useContext(WishListContext)
 	// console.log(data)
 
 	let newRecipes = []
@@ -23,7 +26,7 @@ const RecipesList = () => {
 		newRecipes.push(data[value])
 	}
 
-	console.log(newRecipes)
+	// console.log(newRecipes)
 
 	const recipes = newRecipes?.map(recipe => (
 		<div key={recipe.id} className={styles.recipeCard}>
