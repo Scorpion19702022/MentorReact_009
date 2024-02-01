@@ -9,6 +9,7 @@ import styles from './NavBar.module.css'
 import DarkIcon from './assets/dark_icon.png'
 import SunIcon from './assets/sun_icon2.png'
 import HeartIcon from './assets/heart_icon.png'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
 	return (
@@ -24,7 +25,10 @@ const NavBar = () => {
 			</div>
 			<div className={styles.boxNavFavorite}>
 				{/* <FavoriteBorderIcon className={styles.iconFavorite} /> */}
-				<img className={styles.iconFavourite} src={HeartIcon} alt='favourite icon' />
+
+				<Link to={'favouriteList'}>
+					<img className={styles.iconFavourite} src={HeartIcon} alt='favourite icon' />
+				</Link>
 			</div>
 		</div>
 	)

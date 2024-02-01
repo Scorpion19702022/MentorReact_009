@@ -28,7 +28,10 @@ export const WishListProvider = ({ children }: wishListProviderType) => {
 		}
 	}
 
-	const deleteFromWishList = (id: number) => {}
+	const deleteFromWishList = (id: number) => {
+		const deleteFavRecipes = favRecipes.filter((item: any) => item.id !== id)
+		setFavRecipes(deleteFavRecipes)
+	}
 
 	return (
 		<WishListContext.Provider value={{ favRecipes, addToWishList, deleteFromWishList }}>

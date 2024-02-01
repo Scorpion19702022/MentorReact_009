@@ -7,6 +7,8 @@ import Home from './pages/Home'
 import RecipePage from './pages/RecipePage'
 import useFetch from './Hooks/useFetch'
 import { WishListProvider } from './Context/WishListContext'
+import FavRecipes from './pages/FavRecipes'
+import CategoryLink from './components/CategoryLink'
 
 const queryClient = new QueryClient({})
 
@@ -19,6 +21,8 @@ function App() {
 						<Routes>
 							<Route path='/' element={<Home />} />
 							<Route path='/recipe/:id' element={<RecipePage />} />
+							<Route path='/favouriteList' element={<FavRecipes />} />
+							{/* <Route path='/category' element={<CategoryLink />} /> */}
 						</Routes>
 					</BrowserRouter>
 				</WishListProvider>

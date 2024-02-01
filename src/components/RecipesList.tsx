@@ -55,6 +55,9 @@ const RecipesList = () => {
 				rating: <span className={styles.countRating}> {recipe.rating}</span>
 			</p>
 			<em className={styles.author}>{recipe.author}</em>
+			<div>
+				<button onClick={() => addToWishList(recipe)}>Dodaj do ulubioych</button>
+			</div>
 		</div>
 	))
 
