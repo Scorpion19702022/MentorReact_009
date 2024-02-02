@@ -56,7 +56,7 @@ const RecipesList = () => {
 			</p>
 			<em className={styles.author}>{recipe.author}</em>
 			<button className={styles.btnAddWish} onClick={() => addToWishList(recipe)}>
-				Dodaj do ulubioych
+				add to favourite
 			</button>
 		</div>
 	))

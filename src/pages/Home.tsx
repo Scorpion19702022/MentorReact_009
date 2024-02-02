@@ -37,7 +37,7 @@ const Home = () => {
 
 	return (
 		<>
-			{testMap}
+			{/* {testMap} */}
 			<NavBar />
 			<RecipesList />
 		</>
