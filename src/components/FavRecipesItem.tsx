@@ -20,15 +20,15 @@ const FavRecipesItem: React.FC<favRecipeItemProps> = ({ favRecipeInfo }) => {
 							return null
 						}
 						return (
-							<li key={i}>
-								<ul>{i}</ul>
+							<li className={styles.favsList} key={i}>
+								<ul className={styles.favList}>{i}</ul>
 							</li>
 						)
 					})}
 				</div>
-				<p>{favRecipeInfo.author}</p>
-				<em>{favRecipeInfo.rating}</em>
-				<button>delete</button>
+				<p className={styles.favAuthor}>{favRecipeInfo.author}</p>
+				<em className={styles.favRating}>{favRecipeInfo.rating}</em>
+				<button className={styles.favBtn}>delete</button>
 			</div>
 		</div>
 	)

@@ -41,5 +41,43 @@
 .favRecipesItemBox {
 	width: 380px;
 	padding: 2em;
+	display: flex;
 	background-color: var(--color-fav002);
+	border: 0.04em solid var(--color-fav006);
+	border-bottom-right-radius: 2em;
+	border-top-left-radius: 2em;
+	box-shadow: 0.1em 0.1em 0.8em var(--color-fav006);
+}
+
+.favRecipeCard {
+	width: 100%;
+}
+
+.favRecipeTitle {
+	width: 100%;
+	font-size: 1.6em;
+	color: var(--color-fav006);
+	margin-bottom: 0.2em;
+	padding-bottom: 0.2em;
+	border-bottom: 0.04em solid var(--color-fav007);
+}
+
+.favRecipeCategory {
+	width: 100%;
+	color: var(--color-fav005);
+	margin-bottom: 0.4em;
+}
+
+.favRecipeIngrendientsBox {
+	width: 75%;
+	display: flex;
+	flex-direction: column;
+}
+
+.favsList {
+	width: 100%;
+}
+
+.favList {
+	width: 100%;
 }
