@@ -20,9 +20,9 @@ const FavRecipesItem: React.FC<favRecipeItemProps> = ({ favRecipeInfo }) => {
 							return null
 						}
 						return (
-							<li className={styles.favsList} key={i}>
-								<ul className={styles.favList}>{i}</ul>
-							</li>
+							<ul className={styles.favsList} key={i}>
+								<li className={styles.favList}>{i}</li>
+							</ul>
 						)
 					})}
 				</div>
