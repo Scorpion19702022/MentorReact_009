@@ -13,7 +13,7 @@ const FavRecipes = () => {
 	return (
 		<div className={styles.wrapperFavRec}>
 			<h2 className={styles.favHeading}>Favourite Lists</h2>
-			<div>
+			<div className={styles.favListGird}>
 				{favRecipes.map((item: RecipeType) => {
 					return <FavRecipesItem favRecipeInfo={item} />
 				})}
