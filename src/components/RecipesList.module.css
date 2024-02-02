@@ -99,3 +99,19 @@
 	bottom: 4%;
 	right: 6%;
 }
+
+.btnAddWish {
+	position: absolute;
+	left: 5%;
+	bottom: 4%;
+	padding: 0.2em 0.4em;
+	background-color: var(--color-cakeFour);
+	border: 0.04em solid var(--color-cakeFive);
+	color: var(--color-cakeOne);
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.btnAddWish:hover {
+	background-color: var(--color-cakeFive);
+}
