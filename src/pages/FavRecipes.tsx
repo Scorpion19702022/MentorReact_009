@@ -12,10 +12,12 @@ const FavRecipes = () => {
 
 	return (
 		<div className={styles.wrapperFavRec}>
-			<h2 className={styles.favHeding}>Favourite Lists</h2>
-			{favRecipes.map((item: RecipeType) => {
-				return <FavRecipesItem favRecipeInfo={item} />
-			})}
+			<h2 className={styles.favHeading}>Favourite Lists</h2>
+			<div>
+				{favRecipes.map((item: RecipeType) => {
+					return <FavRecipesItem favRecipeInfo={item} />
+				})}
+			</div>
 		</div>
 	)
 }
