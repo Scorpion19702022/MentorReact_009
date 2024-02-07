@@ -6,21 +6,21 @@ import RecipesList from '../components/RecipesList'
 const Home = () => {
 	const { recipes, isError, isLoading, recipe } = useFetch()
 
-	console.log(recipes)
+	// console.log(recipes)
 
 	// console.log(data)
 
 	// console.log(recipe)
 
 	const testMap = recipe?.map((item: any) => {
-		console.log(item)
+		// console.log(item)
 		return <div>{item.category}</div>
 	})
 
 	// const [recipe, setRecipe] = useState<any>([])
 
 	useEffect(() => {
-		console.log(recipe)
+		// console.log(recipe)
 	}, [recipe])
 
 	// console.log(recipe)

@@ -8,7 +8,7 @@ import styles from '../components/FavRecipesItem.module.css'
 const FavRecipes = () => {
 	const { favRecipes } = useContext(WishListContext)
 
-	console.log(favRecipes)
+	// console.log(favRecipes)
 
 	return (
 		<div className={styles.wrapperFavRec}>

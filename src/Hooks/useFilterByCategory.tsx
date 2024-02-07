@@ -13,13 +13,13 @@ const useFilterByCategory = () => {
 		const category = recipe.filter((item: any) => item.category === type)
 
 		if (type === 'soup') {
-			console.log(category)
+			// console.log(category)
 		} else if (type === 'meat') {
-			console.log(category)
+			// console.log(category)
 		} else if (type === 'cake') {
-			console.log(category)
+			// console.log(category)
 		} else if (type === 'vege') {
-			console.log(category)
+			// console.log(category)
 		}
 	}
 }
