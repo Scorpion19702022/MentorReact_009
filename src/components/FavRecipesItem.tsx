@@ -12,6 +12,7 @@ const FavRecipesItem: React.FC<favRecipeItemProps> = ({ favRecipeInfo }) => {
 
 	const handleDeleteFavRecipe = id => {
 		const recipeFavDelete = favRecipeInfo.filter((item: any) => item.id !== id)
+		return recipeFavDelete
 	}
 
 	return (
@@ -33,7 +34,7 @@ const FavRecipesItem: React.FC<favRecipeItemProps> = ({ favRecipeInfo }) => {
 				</div>
 				<p className={styles.favAuthor}>author: {favRecipeInfo.author}</p>
 				<em className={styles.favRating}>rating: {favRecipeInfo.rating}</em>
-				<button className={styles.favBtn} onClick={}>
+				<button className={styles.favBtn} onClick={() => handleDeleteFavRecipe(favRecipeInfo.id)}>
 					delete
 				</button>
 			</div>
