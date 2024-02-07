@@ -19,9 +19,9 @@ const FavRecipes = () => {
 				})}
 			</div> */}
 			<div className={styles.favListGird}>
-				{favRecipes.map((item: RecipeType) => {
+				{favRecipes.map((item: RecipeType, i: any) => {
 					return (
-						<div className={styles.favListItem}>
+						<div className={styles.favListItem} key={i}>
 							<FavRecipesItem favRecipeInfo={item} />
 						</div>
 					)

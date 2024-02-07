@@ -7,7 +7,8 @@ type favRecipeItemProps = {
 }
 
 const FavRecipesItem: React.FC<favRecipeItemProps> = ({ favRecipeInfo }) => {
-	console.log(favRecipeInfo)
+	// console.log(favRecipeInfo)
+	console.log(favRecipeInfo.id)
 
 	return (
 		<div className={styles.favRecipesItemBox}>
