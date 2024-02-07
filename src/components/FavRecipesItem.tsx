@@ -27,8 +27,8 @@ const FavRecipesItem: React.FC<favRecipeItemProps> = ({ favRecipeInfo }) => {
 						)
 					})}
 				</div>
-				<p className={styles.favAuthor}>{favRecipeInfo.author}</p>
-				<em className={styles.favRating}>{favRecipeInfo.rating}</em>
+				<p className={styles.favAuthor}>author: {favRecipeInfo.author}</p>
+				<em className={styles.favRating}>rating: {favRecipeInfo.rating}</em>
 				<button className={styles.favBtn}>delete</button>
 			</div>
 		</div>

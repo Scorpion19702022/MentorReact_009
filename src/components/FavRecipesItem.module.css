@@ -71,9 +71,16 @@
 }
 
 .favRecipeIngrendientsBox {
-	width: 75%;
+	width: 100%;
 	display: flex;
+	margin: 1em 0em;
+	padding: 1em 2em;
 	flex-direction: column;
+	background-color: rgba(119, 238, 0, 0.2);
+}
+
+.favsList {
+	width: 100%;
 }
 
 .favBtn {
@@ -82,6 +89,12 @@
 	right: 0;
 	background-color: var(--color-fav005);
 	border: 0.04em solid var(--color-fav007);
-	padding: 0.2em;
+	padding: 0.4em;
 	color: var(--color-fav001);
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+}
+
+.favBtn:hover {
+	background-color: var(--color-fav006);
 }
