@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import useFetch from '../Hooks/useFetch'
 import NavBar from '../components/NavBar/NavBar'
 import RecipesList from '../components/RecipesList'
+import SearchForm from '../components/SearchForm'
 
 const Home = () => {
 	const { recipes, isError, isLoading, recipe } = useFetch()
@@ -40,6 +41,7 @@ const Home = () => {
 			{/* {testMap} */}
 			<NavBar />
 			<RecipesList />
+			<SearchForm />
 		</>
 	)
 }
