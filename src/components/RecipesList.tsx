@@ -7,6 +7,8 @@ import styles from './RecipesList.module.css'
 import { Link } from 'react-router-dom'
 import useFetch from '../Hooks/useFetch'
 import WishListContext from '../Context/WishListContext'
+import RecipeItem from './RecipeItem'
+import { RecipeType } from '../types/MyTypes'
 
 const RecipesList = () => {
 	const fetchReiceps = async () => {
@@ -28,38 +30,9 @@ const RecipesList = () => {
 
 	// console.log(newRecipes)
 
-	const recipes = newRecipes?.map(recipe => (
-		<div key={recipe.id} className={styles.recipeCard}>
-			<Link to={`/recipe/${recipe.id}`}>
-				<img className={styles.img} src={recipe.img} alt='' />
-			</Link>
-			<h3 className={styles.title}>{recipe.meal}</h3>
-			<h5 className={styles.recipeCategory}>{recipe.category}</h5>
-			<div className={styles.ingredients}>
-				<em className={styles.titleIngredients}>ingredients:</em>
-				<ul className={styles.recipeIngredients}>
-					{recipe.ingrendients.map((i: any) => {
-						if (i === null) {
-							return null
-						}
-						return (
-							<li key={i} className={styles.ingredient}>
-								{i}
-							</li>
-						)
-					})}
-				</ul>
-			</div>
-			<p className={styles.method}>{recipe.methodOfPreparing}</p>
-			<p className={styles.rating}>
-				rating: <span className={styles.countRating}> {recipe.rating}</span>
-			</p>
-			<em className={styles.author}>{recipe.author}</em>
-			<button className={styles.btnAddWish} onClick={() => addToWishList(recipe)}>
-				add to favourite
-			</button>
-		</div>
-	))
+	const recipes = newRecipes?.map((recipe: RecipeType) => {
+		return <RecipeItem recipeInfo={recipe} />
+	})
 
 	return (
 		<div className={styles.boxRecipesList}>
