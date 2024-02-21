@@ -1,3 +1,36 @@
+:root {
+	--color-cakeOne: #fff5c8;
+	--color-cakeTwo: #ffd61e;
+	--color-cakeThree: #ff6a00;
+	--color-cakeFour: #862200;
+	--color-cakeFive: #490000;
+	--color-soupOne: #ffadad;
+	--color-soupTwo: #975d5d;
+	--color-soupThree: #f50000;
+	--color-soupFour: #d10000;
+	--color-soupFive: #4a0b0b;
+}
+
 .wrapper_category {
 	width: 100%;
+}
+
+.wrapper_search_form {
+	width: 100%;
+	margin-top: 6em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.content_category {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 6em;
+}
+
+.heading_category {
+	color: var(--color-soupFive);
 }

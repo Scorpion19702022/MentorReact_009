@@ -2,6 +2,8 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import CategoryLink from './CategoryLink'
 import { useNavigate } from 'react-router-dom'
 
+import styles from '../components/Category.module.css'
+
 type searchType = {
 	query: string
 }
@@ -23,11 +25,13 @@ const SearchForm = () => {
 	}
 
 	return (
-		<div>
+		<div className={styles.wrapper_search_form}>
 			<CategoryLink />
 			<form onSubmit={handleSubmit(onSubmit)}>
-				<input {...register('query')} type='text' />
-				<button type='submit'>Szukaj</button>
+				<input className={styles.input_search_form} {...register('query')} type='text' />
+				<button className={styles.btn_search_form} type='submit'>
+					Szukaj
+				</button>
 			</form>
 		</div>
 	)

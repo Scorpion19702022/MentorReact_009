@@ -36,9 +36,9 @@ const Category = () => {
 		<div className={styles.wrapper_category}>
 			<NavBar />
 			<div className={styles.content_category}>
-				<CategoryLink />
+				{/* <CategoryLink /> */}
 				<SearchForm />
-				<h1>
+				<h1 className={styles.heading_category}>
 					Category: {urlCategoryRecipe} ({result?.length})
 				</h1>
 				<div>

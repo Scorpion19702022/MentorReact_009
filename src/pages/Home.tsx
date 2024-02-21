@@ -40,8 +40,8 @@ const Home = () => {
 		<>
 			{/* {testMap} */}
 			<NavBar />
-			<RecipesList />
 			<SearchForm />
+			<RecipesList />
 		</>
 	)
 }
