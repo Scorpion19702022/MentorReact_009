@@ -27,7 +27,7 @@ const SearchForm = () => {
 	return (
 		<div className={styles.wrapper_search_form}>
 			<CategoryLink />
-			<form onSubmit={handleSubmit(onSubmit)}>
+			<form className={styles.form_search_form} onSubmit={handleSubmit(onSubmit)}>
 				<input className={styles.input_search_form} {...register('query')} type='text' />
 				<button className={styles.btn_search_form} type='submit'>
 					Szukaj
