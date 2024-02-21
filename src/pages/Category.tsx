@@ -18,15 +18,23 @@ const Category = () => {
 
 	const { recipes } = useFetch()
 
-	console.log(recipes)
+	// console.log(recipes)
 
-	useEffect(() => {
-		if (recipes !== undefined) {
-			const resultCategoryRecipe =
-				recipes !== undefined ? recipes?.filter(recipe => recipe.category === urlCategoryRecipe) : null
-			setResult(resultCategoryRecipe)
-		}
-	}, [recipes, urlCategoryRecipe])
+	// useEffect(() => {
+	// 	if (recipes !== undefined) {
+	// 		const resultCategoryRecipe =
+	// 			recipes !== undefined ? recipes?.filter(recipe => recipe.category === urlCategoryRecipe) : null
+	// 		setResult(resultCategoryRecipe)
+	// 	}
+	// }, [recipes, urlCategoryRecipe])
+
+	const test = recipes?.filter(recipe => recipe.category === urlCategoryRecipe)
+
+	console.log(typeof test)
+
+	const tab = [1, 2, 3]
+
+	console.log(typeof tab)
 
 	return (
 		<div>
@@ -36,11 +44,11 @@ const Category = () => {
 			<h1>
 				Category: {urlCategoryRecipe} ({result?.length})
 			</h1>
-			<div>
+			{/* <div>
 				{result?.map((recipe: RecipeType) => {
 					return <RecipeItem recipeInfo={recipe} />
 				})}
-			</div>
+			</div> */}
 		</div>
 	)
 }
