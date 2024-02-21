@@ -28,15 +28,15 @@ const RecipesList = () => {
 		newRecipes.push(data[value])
 	}
 
-	// console.log(newRecipes)
+	console.log(newRecipes)
 
-	const recipes = newRecipes?.map((recipe: RecipeType) => {
-		return <RecipeItem recipeInfo={recipe} />
-	})
+	// const recipes = newRecipes?.map((recipe: RecipeType) => {
+	// 	return <RecipeItem recipeInfo={recipe} />
+	// })
 
 	return (
 		<div className={styles.boxRecipesList}>
-			<div className={styles.recipesList}>{recipes}</div>
+			<div className={styles.recipesList}>recipe</div>
 		</div>
 	)
 }
