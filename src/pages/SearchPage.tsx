@@ -6,9 +6,7 @@ const SearchPage = () => {
 
 	const urlSearchRecipe = new URLSearchParams(location.search).get('query')
 
-	const { recipes } = useFetch()
-
-	console.log(recipes)
+	const { data } = useFetch()
 
 	console.log(urlSearchRecipe)
 

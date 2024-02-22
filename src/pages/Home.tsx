@@ -5,7 +5,7 @@ import RecipesList from '../components/RecipesList'
 import SearchForm from '../components/SearchForm'
 
 const Home = () => {
-	const { recipes, isError, isLoading, recipe } = useFetch()
+	const { data, isError, isLoading } = useFetch()
 
 	// console.log(recipes)
 
@@ -13,16 +13,16 @@ const Home = () => {
 
 	// console.log(recipe)
 
-	const testMap = recipe?.map((item: any) => {
-		// console.log(item)
-		return <div>{item.category}</div>
-	})
+	// const testMap = recipe?.map((item: any) => {
+	// 	// console.log(item)
+	// 	return <div>{item.category}</div>
+	// })
 
 	// const [recipe, setRecipe] = useState<any>([])
 
-	useEffect(() => {
-		// console.log(recipe)
-	}, [recipe])
+	// useEffect(() => {
+	// 	// console.log(recipe)
+	// }, [recipe])
 
 	// console.log(recipe)
 

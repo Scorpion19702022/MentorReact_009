@@ -18,19 +18,39 @@ const Category = () => {
 
 	// console.log(urlCategoryRecipe)
 
-	const { recipes } = useFetch()
+	const { data, isError, isLoading } = useFetch()
 
-	// console.log(recipes)
+	if (isLoading) return <h2>Louding ...</h2>
 
-	// console.log(recipes)
+	// if (!isLoading) {
+	// 	const filterRecipe = data?.filter((recipe: any) => recipe.category === urlCategoryRecipe)
+	// 	setResult(filterRecipe)
+	// }
 
+	// if (data !== undefined) {
+	// 	const filterRecipe = data?.filter((recipe: any) => recipe.category === urlCategoryRecipe)
+	// 	setResult(filterRecipe)
+	// }
+
+	// eslint-disable-next-line react-hooks/rules-of-hooks
 	useEffect(() => {
-		if (recipes !== undefined) {
-			const resultCategoryRecipe =
-				recipes !== undefined ? recipes?.filter(recipe => recipe.category === urlCategoryRecipe) : null
-			setResult(resultCategoryRecipe)
+		if (data !== undefined) {
+			const filterRecipe = data?.filter((recipe: any) => recipe.category === urlCategoryRecipe)
+			setResult(filterRecipe)
 		}
-	}, [recipes, urlCategoryRecipe])
+	}, [isLoading])
+
+	// console.log(recipes)
+
+	// console.log(recipes)
+
+	// useEffect(() => {
+	// 	if (recipes !== undefined) {
+	// 		const resultCategoryRecipe =
+	// 			recipes !== undefined ? recipes?.filter(recipe => recipe.category === urlCategoryRecipe) : null
+	// 		setResult(resultCategoryRecipe)
+	// 	}
+	// }, [recipes, urlCategoryRecipe])
 
 	return (
 		<div className={styles.wrapper_category}>
