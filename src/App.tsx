@@ -18,17 +18,15 @@ function App() {
 	return (
 		<div className={styles.App}>
 			<QueryClientProvider client={queryClient}>
-				<WishListProvider>
-					<BrowserRouter>
-						<Routes>
-							<Route path='/' element={<Home />} />
-							<Route path='/recipe/:id' element={<RecipePage />} />
-							<Route path='/favouriteList' element={<FavRecipes />} />
-							<Route path='/search' element={<SearchPage />} />
-							<Route path='/category' element={<Category />} />
-						</Routes>
-					</BrowserRouter>
-				</WishListProvider>
+				<BrowserRouter>
+					<Routes>
+						<Route path='/' element={<Home />} />
+						<Route path='/recipe/:id' element={<RecipePage />} />
+						<Route path='/favouriteList' element={<FavRecipes />} />
+						<Route path='/search' element={<SearchPage />} />
+						<Route path='/category' element={<Category />} />
+					</Routes>
+				</BrowserRouter>
 			</QueryClientProvider>
 		</div>
 	)
