@@ -4,6 +4,7 @@ import FavRecipesItem from '../components/FavRecipesItem'
 import { RecipeType } from '../types/MyTypes'
 
 import styles from '../components/FavRecipesItem.module.css'
+import NavBar from '../components/NavBar/NavBar'
 
 const FavRecipes = () => {
 	const { favRecipes } = useContext(WishListContext)
@@ -12,6 +13,7 @@ const FavRecipes = () => {
 
 	return (
 		<div className={styles.wrapperFavRec}>
+			<NavBar />
 			<h2 className={styles.favHeading}>Favourite Lists</h2>
 			{/* <div className={styles.favListGird}>
 				{favRecipes.map((item: RecipeType) => {
