@@ -14,20 +14,22 @@ const FavRecipes = () => {
 	return (
 		<div className={styles.wrapperFavRec}>
 			<NavBar />
-			<h2 className={styles.favHeading}>Favourite Lists</h2>
-			{/* <div className={styles.favListGird}>
+			<div className={styles.box_favRec}>
+				<h2 className={styles.favHeading}>Favourite Lists</h2>
+				{/* <div className={styles.favListGird}>
 				{favRecipes.map((item: RecipeType) => {
 					return <FavRecipesItem favRecipeInfo={item} />
 				})}
 			</div> */}
-			<div className={styles.favListGird}>
-				{favRecipes.map((item: RecipeType, i: any) => {
-					return (
-						<div className={styles.favListItem} key={i}>
-							<FavRecipesItem favRecipeInfo={item} />
-						</div>
-					)
-				})}
+				<div className={styles.favListGird}>
+					{favRecipes.map((item: RecipeType, i: any) => {
+						return (
+							<div className={styles.favListItem} key={i}>
+								<FavRecipesItem favRecipeInfo={item} />
+							</div>
+						)
+					})}
+				</div>
 			</div>
 		</div>
 	)
