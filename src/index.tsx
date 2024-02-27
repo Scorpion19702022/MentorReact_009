@@ -4,16 +4,11 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 
-// import { QueryClientProvider, QueryClient } from 'react-query'
-import { WishListProvider } from './Context/WishListContext'
-
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 root.render(
 	<React.StrictMode>
-		<WishListProvider>
-			<App />
-		</WishListProvider>
+		<App />
 	</React.StrictMode>
 )
 
