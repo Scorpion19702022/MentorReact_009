@@ -1,5 +1,7 @@
 import React from 'react'
 
+import DarkModeIcon from '@mui/icons-material/DarkMode'
+import LightModeIcon from '@mui/icons-material/LightMode'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import Logo from './assets/logo_ingredients.png'
 import styles from './NavBar.module.css'
@@ -16,12 +18,13 @@ const NavBar = () => {
 				<img className={styles.logo} src={Logo} alt='logo' />
 			</div>
 			<div className={styles.boxNavIcon}>
+				{/* <DarkModeIcon className={styles.iconDark} style={{ width: '50px', height: '50px' }} />
+				<LightModeIcon className={styles.iconLight} /> */}
 				<img className={styles.iconDark} src={DarkIcon} alt='dark icon' />
 				<img className={styles.iconLight} src={SunIcon} alt='sun icon' />
 			</div>
 			<div className={styles.boxNavFavorite}>
 				{/* <FavoriteBorderIcon className={styles.iconFavorite} /> */}
-				{<FavoriteBorderIcon />}
 
 				<Link to={'favouriteList'}>
 					<img className={styles.iconFavourite} src={HeartIcon} alt='favourite icon' />

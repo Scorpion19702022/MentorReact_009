@@ -3,6 +3,8 @@ import WishListContext from '../Context/WishListContext'
 import FavRecipesItem from '../components/FavRecipesItem'
 import { RecipeType } from '../types/MyTypes'
 
+// import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+
 import styles from '../components/FavRecipesItem.module.css'
 import NavBar from '../components/NavBar/NavBar'
 
@@ -16,6 +18,7 @@ const FavRecipes = () => {
 			<NavBar />
 			<div className={styles.box_favRec}>
 				<h2 className={styles.favHeading}>Favourite Lists</h2>
+				{/* {<FavoriteBorderIcon />} */}
 				{/* <div className={styles.favListGird}>
 				{favRecipes.map((item: RecipeType) => {
 					return <FavRecipesItem favRecipeInfo={item} />
