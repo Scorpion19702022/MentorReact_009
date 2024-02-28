@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styles from './App.module.css'
-import { QueryClientProvider, QueryClient } from 'react-query'
+// import { QueryClientProvider, QueryClient } from 'react-query'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import RecipePage from './pages/RecipePage'
@@ -12,12 +12,12 @@ import CategoryLink from './components/CategoryLink'
 import SearchPage from './pages/SearchPage'
 import Category from './pages/Category'
 
-const queryClient = new QueryClient({})
+// const queryClient = new QueryClient({})
 
 function App() {
 	return (
 		<div className={styles.App}>
-			<QueryClientProvider client={queryClient}>
+			{/* <QueryClientProvider client={queryClient}>
 				<WishListProvider>
 					<BrowserRouter>
 						<Routes>
@@ -29,7 +29,12 @@ function App() {
 						</Routes>
 					</BrowserRouter>
 				</WishListProvider>
-			</QueryClientProvider>
+			</QueryClientProvider> */}
+			<BrowserRouter>
+				<Routes>
+					<Route path='/' element={<Home />} />
+				</Routes>
+			</BrowserRouter>
 		</div>
 	)
 }
