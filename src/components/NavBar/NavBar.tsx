@@ -1,8 +1,8 @@
 import React from 'react'
 
-import DarkModeIcon from '@mui/icons-material/DarkMode'
-import LightModeIcon from '@mui/icons-material/LightMode'
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+// import DarkModeIcon from '@mui/icons-material/DarkMode'
+// import LightModeIcon from '@mui/icons-material/LightMode'
+// import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import Logo from './assets/logo_ingredients.png'
 import styles from './NavBar.module.css'
 
