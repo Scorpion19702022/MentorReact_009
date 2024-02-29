@@ -5,9 +5,8 @@ import { useQuery } from 'react-query'
 const useFetch = () => {
 	const getRecipes = async () => {
 		const res = await axios.get('https://recipeapp-4edaa-default-rtdb.europe-west1.firebasedatabase.app/Recipes.json')
-		const recipes: any[] = Object.values(res.data)
 
-		return recipes
+		return res.data
 	}
 
 	useEffect(() => {

@@ -5,14 +5,14 @@ import SearchForm from '../components/SearchForm'
 import useFetch from '../Hooks/useFetch'
 import { RecipeType } from '../types/MyTypes'
 import RecipeItem from '../components/RecipeItem'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 
 import styles from '../components/Category.module.css'
+import CategoryRecipeContext from '../Context/CategoryRecipeContext'
+import useFilterByCategory from '../Hooks/useFilterByCategory'
 
 const Category = () => {
 	const location = useLocation()
-
-	const [result, setResult] = useState<any>([])
 
 	const urlCategoryRecipe = new URLSearchParams(location.search).get('name')
 
@@ -20,37 +20,15 @@ const Category = () => {
 
 	const { data, isError, isLoading } = useFetch()
 
-	if (isLoading) return <h2>Louding ...</h2>
+	// const { recipesCategory, selectRecipesByCategory } = useContext(CategoryRecipeContext)
 
-	// if (!isLoading) {
-	// 	const filterRecipe = data?.filter((recipe: any) => recipe.category === urlCategoryRecipe)
-	// 	setResult(filterRecipe)
-	// }
-
-	// if (data !== undefined) {
-	// 	const filterRecipe = data?.filter((recipe: any) => recipe.category === urlCategoryRecipe)
-	// 	setResult(filterRecipe)
-	// }
-
-	// eslint-disable-next-line react-hooks/rules-of-hooks
-	useEffect(() => {
-		if (data !== undefined) {
-			const filterRecipe = data?.filter((recipe: any) => recipe.category === urlCategoryRecipe)
-			setResult(filterRecipe)
-		}
-	}, [isLoading])
-
-	// console.log(recipes)
-
-	// console.log(recipes)
+	const { recipesCategory, selectRecipesByCategory } = useFilterByCategory(String(urlCategoryRecipe))
 
 	// useEffect(() => {
-	// 	if (recipes !== undefined) {
-	// 		const resultCategoryRecipe =
-	// 			recipes !== undefined ? recipes?.filter(recipe => recipe.category === urlCategoryRecipe) : null
-	// 		setResult(resultCategoryRecipe)
-	// 	}
-	// }, [recipes, urlCategoryRecipe])
+	// 	selectRecipesByCategory(String(urlCategoryRecipe))
+	// }, [])
+
+	if (isLoading) return <h2>Louding ...</h2>
 
 	return (
 		<div className={styles.wrapper_category}>
@@ -59,11 +37,15 @@ const Category = () => {
 				{/* <CategoryLink /> */}
 				<SearchForm />
 				<h1 className={styles.heading_category}>
-					Category: {urlCategoryRecipe} ({result?.length})
+					Category: {urlCategoryRecipe} ({recipesCategory?.length})
 				</h1>
 				<div>
-					{result?.map((recipe: RecipeType) => {
-						return <RecipeItem recipeInfo={recipe} />
+					{recipesCategory?.map((recipe: RecipeType, index) => {
+						return (
+							<div key={index}>
+								<RecipeItem recipeInfo={recipe} />
+							</div>
+						)
 					})}
 				</div>
 			</div>

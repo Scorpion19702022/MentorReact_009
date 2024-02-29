@@ -1,27 +1,28 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import useFetch from './useFetch'
 
-const useFilterByCategory = () => {
+const useFilterByCategory = (category: string) => {
 	// const { recipe } = useFetch()
 
-	const [soup, setSoup] = useState()
-	const [meat, setMeat] = useState()
-	const [cake, setCake] = useState()
-	const [vege, setVege] = useState()
+	const { data } = useFetch()
 
-	// const findProductByCategory = (type: string) => {
-	// 	const category = recipe.filter((item: any) => item.category === type)
+	const recipes = Object.values(data)
 
-	// 	if (type === 'soup') {
-	// 		// console.log(category)
-	// 	} else if (type === 'meat') {
-	// 		// console.log(category)
-	// 	} else if (type === 'cake') {
-	// 		// console.log(category)
-	// 	} else if (type === 'vege') {
-	// 		// console.log(category)
-	// 	}
-	// }
+	const [recipesCategory, setRecipesCategory] = useState<any[]>([])
+
+	useEffect(() => {
+		selectRecipesByCategory()
+	}, [])
+
+	const selectRecipesByCategory = () => {
+		const selectCategory = recipes.filter((recipe: any) => recipe.category === category)
+
+		console.log(selectCategory)
+
+		setRecipesCategory(selectCategory)
+	}
+
+	return { recipesCategory, selectRecipesByCategory }
 }
 
 export default useFilterByCategory

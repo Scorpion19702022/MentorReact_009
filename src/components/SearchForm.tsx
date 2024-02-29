@@ -3,12 +3,16 @@ import CategoryLink from './CategoryLink'
 import { useNavigate } from 'react-router-dom'
 
 import styles from '../components/Category.module.css'
+import { useContext } from 'react'
+import CategoryRecipeContext from '../Context/CategoryRecipeContext'
 
 type searchType = {
 	query: string
 }
 
 const SearchForm = () => {
+	const { selectRecipesByCategory } = useContext(CategoryRecipeContext)
+
 	const {
 		register,
 		handleSubmit,
@@ -20,6 +24,7 @@ const SearchForm = () => {
 
 	const onSubmit: SubmitHandler<searchType> = data => {
 		console.log(data)
+		selectRecipesByCategory(data.query)
 		navigate(`/search?query=${data.query}`)
 		reset()
 	}

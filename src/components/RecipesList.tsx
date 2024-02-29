@@ -30,8 +30,12 @@ const RecipesList = () => {
 
 	// console.log(newRecipes)
 
-	const recipes = newRecipes?.map((recipe: RecipeType) => {
-		return <RecipeItem recipeInfo={recipe} />
+	const recipes = newRecipes?.map((recipe: RecipeType, index) => {
+		return (
+			<div key={index}>
+				<RecipeItem recipeInfo={recipe} />
+			</div>
+		)
 	})
 
 	return (
