@@ -12,8 +12,10 @@
 	--color-gradientOne: linear-gradient(45deg, #fff5c8 20%, #f50000 180%);
 }
 
-.main_recipes {
+/* .main_recipes {
 	display: flex;
+	background-color: blue;
+	margin: 2em;
 }
 
 .boxRecipesList {
@@ -30,7 +32,9 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-}
+	margin: 2em;
+	background-color: green;
+} */
 
 .recipeCard {
 	position: relative;
