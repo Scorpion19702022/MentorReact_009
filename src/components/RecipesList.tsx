@@ -32,7 +32,7 @@ const RecipesList = () => {
 
 	const recipes = newRecipes?.map((recipe: RecipeType, index) => {
 		return (
-			<div key={index}>
+			<div key={index} className={styles.main_recipes}>
 				<RecipeItem recipeInfo={recipe} />
 			</div>
 		)
