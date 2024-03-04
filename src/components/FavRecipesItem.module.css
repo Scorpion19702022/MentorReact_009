@@ -39,15 +39,19 @@
 	width: 100%;
 	min-height: 100%;
 	padding: 4em;
-	display: grid;
+	display: flex;
+	flex-wrap: wrap;
+	/* display: grid;
 	grid-gap: 2em;
-	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
 }
 
 .favRecipesItemBox {
 	/* position: relative; */
-	width: 380px;
+	width: 360px;
+	height: 380px;
 	padding: 2em;
+	margin: 0.6em;
 	display: flex;
 	background-color: var(--color-fav002);
 	border: 0.04em solid var(--color-fav006);
