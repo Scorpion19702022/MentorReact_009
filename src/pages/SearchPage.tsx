@@ -4,6 +4,8 @@ import NavBar from '../components/NavBar/NavBar'
 import { useContext } from 'react'
 import CategoryRecipeContext from '../Context/CategoryRecipeContext'
 
+import styles from '../components/Search.module.css'
+
 const SearchPage = () => {
 	const location = useLocation()
 
@@ -28,9 +30,11 @@ const SearchPage = () => {
 	// const searcResult = recipes?.filter( item)
 
 	return (
-		<div>
+		<div className={styles.wrapper_search}>
 			<NavBar />
-			<h1>Search</h1>
+			<div className={styles.box_search}>
+				<h1>Search</h1>
+			</div>
 		</div>
 	)
 }
